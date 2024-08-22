@@ -24,7 +24,10 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/favicon.png",
+      "build": {
+        "publicUrl": "https://carolinasfreitas.github.io/projeto-frameworks/"
+      }
     },
     "plugins": [
       "expo-router"

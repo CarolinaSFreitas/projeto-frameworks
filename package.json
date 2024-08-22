@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "expo start",
-    "deploy": "expo export https://carolinasfreitas.github.io/projeto-frameworks/",
+    "deploy": "expo export",
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo start --android",
     "ios": "expo start --ios",
