@@ -10,7 +10,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
-    "build": "npx expo export --out-dir web-build",
+    "build": "npm run build",
     "lint": "expo lint"
   },
   "jest": {
