@@ -3,7 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  
+      - main 
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -25,9 +26,9 @@ jobs:
       run: |
         npm install -g expo-cli
 
-    - name: Build web
+    - name: Export web
       run: |
-        npx expo build:web
+        npx expo export --public-url https://carolinasfreitas.github.io/projeto-frameworks/ --out-dir web-build
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
