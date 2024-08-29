@@ -1,0 +1,15 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "target": "es6",                           // Define a versão do JavaScript para saída
+    "lib": ["es6", "dom"],                     // Bibliotecas padrão usadas
+    "allowJs": true,                          // Permite arquivos JavaScript
+    "jsx": "react",                           // Define o tipo de JSX que será usado
+    "moduleResolution": "node",               // Resolve módulos usando a resolução do Node.js
+    "strict": true,                           // Ativa todas as verificações estritas
+    "esModuleInterop": true,                  // Permite a interoperabilidade entre módulos ES e CommonJS
+    "skipLibCheck": true,                     // Ignora a verificação dos tipos das bibliotecas
+    "noEmit": true                            // Não emite arquivos de saída (útil para projetos TypeScript apenas)
+  },
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js"]
+}
