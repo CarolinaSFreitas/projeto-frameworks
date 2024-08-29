@@ -1,5 +1,5 @@
 {
-  "extends": "expo/tsconfig.base",
+  "extends": "./node_modules/expo/tsconfig.base",
   "compilerOptions": {
     "target": "es6",                           // Define a versão do JavaScript para saída
     "lib": ["es6", "dom"],                     // Bibliotecas padrão usadas

@@ -1,22 +1,23 @@
-// app/index.tsx
-import React from 'react';
-import { View, Text } from 'react-native';
-import styles from '../styles/IndexStyles'; // Importe os estilos do arquivo separado
+// import React from 'react';
+// import { View, Text, StyleSheet } from 'react-native';
+// import AppLayout from '../app/_layout'; // Certifique-se de que o caminho está correto
 
-const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Text>Meu Cabeçalho</Text>
-      </View>
-      <View style={styles.content}>
-        {children}
-      </View>
-      <View style={styles.footer}>
-        <Text>Meu Rodapé</Text>
-      </View>
-    </View>
-  );
-};
+// const App = () => {
+//   return (
+//     <AppLayout>
+//       <View style={styles.container}>
+//         <Text>Conteúdo Principal</Text> {/* Esse texto pode ser substituído pelo conteúdo principal das suas telas */}
+//       </View>
+//     </AppLayout>
+//   );
+// };
 
-export default Layout;
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//   },
+// });
+
+// export default App;

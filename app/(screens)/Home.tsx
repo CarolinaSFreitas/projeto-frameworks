@@ -1,14 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import AppLayout from './app/_layout'; 
 
-const App = () => {
+const Home: React.FC = () => {
   return (
-    <AppLayout>
-      <View style={styles.container}>
-       
-      </View>
-    </AppLayout>
+    <View style={styles.container}>
+      <Text>Home Screen</Text>
+    </View>
   );
 };
 
@@ -20,4 +17,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default Home;
