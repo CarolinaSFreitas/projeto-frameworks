@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, SafeAreaView } from 'react-native';
 import Navigation from './Navigation'; 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
