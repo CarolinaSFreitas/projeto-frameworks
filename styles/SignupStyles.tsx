@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
+const styles2 = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     logo: {
         width: 300,
         height: 300,
-        marginTop: -50,
+        marginTop: -80,
         marginBottom: 10,
     },
     inputContainer: {
@@ -39,19 +39,13 @@ const styles = StyleSheet.create({
         marginBottom: 4,
         fontFamily: 'poppins-medium',
     },
-    buttonSignup: {
-        fontFamily: 'poppins-medium',
-        color: '#fff',
-        fontSize: 16,
-    },
-
     buttonContainer: {
         width: '100%',
         marginTop: 20,
         borderRadius: 8,
     },
-    loginButton: {
-        backgroundColor: '#3EE1EA',
+    submitButton: {
+        backgroundColor: '#C98EE7', 
         padding: 10,
         borderRadius: 8,
         alignItems: 'center',
@@ -61,18 +55,12 @@ const styles = StyleSheet.create({
         fontFamily: 'poppins-medium',
         fontSize: 16,
     },
-    errorText: {
-        color: '#B71C1C',
-        marginBottom: 8,
-        fontFamily: 'poppins-light',
-        textAlign: 'center',
-    },
     customFontText: {
         fontFamily: 'poppins-bold',
         fontSize: 28,
         color: '#3EE1EA',
         shadowColor: '#000',
-        marginTop: -40,
+        marginTop: -45,
         marginBottom: 150,
     },
     placeholderText: {
@@ -80,24 +68,31 @@ const styles = StyleSheet.create({
         fontFamily: 'poppins-extra-light',
         color: 'rgba(0, 0, 0, 0.5)',
     },
-    socialContainer: {
+    // backButton: {
+    //     alignSelf: 'flex-start',
+    //     marginTop: -60,
+    //     marginLeft: 10,
+    // },
+    socialContainer2: {
         alignItems: 'center',
         marginVertical: 20,
+        marginTop: 40,
     },
     orText: {
         fontSize: 16,
         color: '#333',
-        marginTop: 20,
-        marginBottom: 40,
+        marginVertical: 10,
         fontFamily: 'poppins-medium',
     },
     socialIcons: {
         flexDirection: 'row',
-        justifyContent: 'space-around',
-        width: '60%',
+        justifyContent: 'space-around', 
+        width: '100%',
+        marginTop: 40,
+
     },
     iconButton: {
-        marginHorizontal: 10,
+        marginHorizontal: 25,
     },
     icon: {
         width: 30,
@@ -105,4 +100,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default styles;
+export default styles2;

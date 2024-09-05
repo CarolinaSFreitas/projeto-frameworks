@@ -1,7 +1,7 @@
 // AuthStack.tsx
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import LoginForm from './(components)/Login'; // Importe seu componente de login
+import LoginForm from './(screens)/Login'; // Importe seu componente de login
 
 const AuthStack = createStackNavigator();
 
