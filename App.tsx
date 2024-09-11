@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as Font from 'expo-font';
 import Login from './app/(screens)/Login';
 import Signup from './app/(screens)/Signup';
-import Navigation from './app/Navigation'; // Atualize o caminho conforme necessário
+import Navigation from './app/(navigation)/Navigation'; // Atualize o caminho conforme necessário
 
 const Stack = createStackNavigator();
 

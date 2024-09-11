@@ -1,9 +1,8 @@
-// MainStack.tsx
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from '../app/(screens)/Home'; 
-import NursesList from '../app/(screens)/NursesList';
-import UserProfile from '../app/(screens)/UserProfile';
+import Home from '../(screens)/Home'; 
+import NursesList from '../(screens)/NursesList';
+import UserProfile from '../(screens)/UserProfile';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';

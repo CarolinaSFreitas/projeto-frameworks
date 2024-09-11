@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, SafeAreaView } from 'react-native';
-import Navigation from './Navigation'; 
+import Navigation from './(navigation)/Navigation'; 
 
 const styles = StyleSheet.create({
   container: {
