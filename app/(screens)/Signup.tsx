@@ -9,7 +9,7 @@ const Signup = () => {
 
     return (
         <View style={styles2.container}>
-            {/* Botão de voltar */}
+            {/*  */}
             <Pressable 
                 // style={styles2.backButton} 
                 // onPress={() => navigation.navigate('Login' as never)}
