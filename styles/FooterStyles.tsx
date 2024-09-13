@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f8f8f8', //cor de fundo do nav bottom
     borderTopWidth: 1, //borda superior
     borderTopColor: '#ddd', //cor da borda superior
+    
   },
   iconContainer: {
     alignItems: 'center', //centralizando os icones horizontalmente

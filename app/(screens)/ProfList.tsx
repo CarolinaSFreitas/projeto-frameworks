@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, TextInput, StyleSheet, FlatList, Image, Text, TouchableOpacity } from 'react-native';
 import stylesNurses from '../../styles/ProfStyles';
-import searchBarStyles from '../../styles/SearchStyles'; // Importe os estilos da barra de pesquisa
-import nursesData from '../(data)/ProfData'; // Importe os dados aqui
+import searchBarStyles from '../../styles/SearchStyles'; 
+import nursesData from '../(data)/ProfData'; 
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
 const ProfList: React.FC = () => {
@@ -67,7 +67,7 @@ const ProfList: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5', // Adicione um fundo se necessário
+    backgroundColor: '#f5f5f5', 
   },
 });
 

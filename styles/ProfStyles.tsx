@@ -78,13 +78,13 @@ const stylesNurses = StyleSheet.create({
     paddingVertical: 8,
     paddingHorizontal: 15,
     flex: 1,
-    marginHorizontal: 5, // Espaçamento entre os botões
+    marginHorizontal: 5, 
   },
   buttonSaberMais: {
-    backgroundColor: '#C98EE7', // Cor diferente para o botão "Saber mais"
+    backgroundColor: '#C98EE7',
   },
   buttonContatar: {
-    backgroundColor: '#36c9d1', // Cor diferente para o botão "Contatar"
+    backgroundColor: '#36c9d1', 
   },
   buttonText: {
     color: '#fff',

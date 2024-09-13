@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { View, TextInput, StyleSheet, FlatList, Image, Text, TouchableOpacity } from 'react-native';
 import stylesNurses from '../../styles/ProfStyles';
-import nursesData from '../(data)/ProfData'; // Importe os dados aqui
+import nursesData from '../(data)/ProfData';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
 const ProfList: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Filtra os dados com base no termo de pesquisa
+  //filtra os dados com base na pesquisa
   const filteredData = nursesData.filter((item) =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -47,6 +47,7 @@ const ProfList: React.FC = () => {
         <TextInput
           style={styles.searchInput}
           placeholder="Buscar profissionais"
+          placeholderTextColor="rgba(0, 0, 0, 0.5)" 
           value={searchTerm}
           onChangeText={setSearchTerm}
         />
