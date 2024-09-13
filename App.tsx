@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, ActivityIndicator } from 'react-native';
+import { View, StyleSheet, ActivityIndicator, SafeAreaView } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import * as Font from 'expo-font';
 import Login from './app/(screens)/Login';
 import Signup from './app/(screens)/Signup';
-import Navigation from './app/(navigation)/Navigation'; 
+import Navigation from './app/(navigation)/Navigation';
 
 const Stack = createStackNavigator();
 
@@ -35,20 +35,22 @@ const App = () => {
   }
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        {isLoggedIn ? (
-          <Stack.Screen name="AppLayout" component={Navigation} />
-        ) : (
-          <>
-            <Stack.Screen name="Login">
-              {(props) => <Login {...props} onLogin={setIsLoggedIn} />}
-            </Stack.Screen>
-            <Stack.Screen name="Signup" component={Signup} />
-          </>
-        )}
-      </Stack.Navigator>
-    </NavigationContainer>
+    <SafeAreaView style={styles.container}>
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          {isLoggedIn ? (
+            <Stack.Screen name="AppLayout" component={Navigation} />
+          ) : (
+            <>
+              <Stack.Screen name="Login">
+                {(props) => <Login {...props} onLogin={setIsLoggedIn} />}
+              </Stack.Screen>
+              <Stack.Screen name="Signup" component={Signup} />
+            </>
+          )}
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaView>
   );
 };
 
