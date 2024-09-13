@@ -18,10 +18,23 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.carolinasfreitas.florencecare"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "263002b6-4d3e-4170-818f-b2006d5eaf7a"
+      }
+    },
+    "owner": "carolinasfreitas",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/263002b6-4d3e-4170-818f-b2006d5eaf7a"
     }
   }
 }
