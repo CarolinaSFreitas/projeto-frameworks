@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginHorizontal: 10, //espaçamento horizontal dos icones
+
   }
 });
 

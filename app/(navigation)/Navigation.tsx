@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../(screens)/Home'; 
-import NursesList from '../(screens)/NursesList';
+import NursesList from '../(screens)/ProfList';
 import UserProfile from '../(screens)/UserProfile';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
@@ -16,10 +16,10 @@ const Navigation: React.FC = () => {
         tabBarIcon: ({ color, size }) => {
           let iconName: string | undefined;
 
-          if (route.name === 'NursesList') {
+          if (route.name === 'Profissionais') {
             iconName = 'user-nurse';
             return <FontAwesome6 name={iconName} size={size} color={color} />;
-          } else if (route.name === 'UserProfile') {
+          } else if (route.name === 'Perfil') {
             iconName = 'user-alt';
             return <FontAwesome5 name={iconName} size={size} color={color} />;
           } else if (route.name === 'Home') {
@@ -30,11 +30,13 @@ const Navigation: React.FC = () => {
           return null;
         },
         headerShown: false,
+        tabBarActiveTintColor: '#C98EE7', // Cor dos ícones quando a aba está selecionada
+        tabBarInactiveTintColor: 'gray', // Cor dos ícones quando a aba não está selecionada
       })}
     >
       <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="NursesList" component={NursesList} />
-      <Tab.Screen name="UserProfile" component={UserProfile} />
+      <Tab.Screen name="Profissionais" component={NursesList} />
+      <Tab.Screen name="Perfil" component={UserProfile} />
     </Tab.Navigator>
   );
 };

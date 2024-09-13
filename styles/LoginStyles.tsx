@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
     },
     loginButton: {
-        backgroundColor: '#3EE1EA',
+        backgroundColor: '#36c9d1',
         padding: 10,
         borderRadius: 8,
         alignItems: 'center',
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     customFontText: {
         fontFamily: 'poppins-bold',
         fontSize: 28,
-        color: '#3EE1EA',
+        color: '#36c9d1',
         shadowColor: '#000',
         marginTop: -40,
         marginBottom: 150,

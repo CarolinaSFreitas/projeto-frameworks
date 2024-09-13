@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../(screens)/Home'; 
-import NursesList from '../(screens)/NursesList';
+import NursesList from '../(screens)/ProfList';
 import UserProfile from '../(screens)/UserProfile';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
