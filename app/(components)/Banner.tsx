@@ -6,17 +6,17 @@ interface WaveProps {
   customStyles?: ViewStyle;
 }
 
-const { width, height } = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
 const Wave: React.FC<WaveProps> = ({ customStyles }) => {
   return (
     <View style={[styles.container, customStyles]}>
       <View style={styles.waveBackground}>
         <Svg
-          width={width * 3}
+          width={width * 3} 
           height={320}
           viewBox="0 0 1440 320"
-          preserveAspectRatio="none"
+          preserveAspectRatio="xMidYMid slice"
           style={styles.svg}
         >
           <Path
@@ -31,10 +31,9 @@ const Wave: React.FC<WaveProps> = ({ customStyles }) => {
 
 const styles = StyleSheet.create({
   container: {
-    width: '200%',
-    height: 140, 
+    width: '300%',
+    height: 140,
     overflow: 'hidden',
-    flexDirection: 'row',
   },
   waveBackground: {
     backgroundColor: '#C98EE7',
