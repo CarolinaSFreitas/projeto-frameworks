@@ -15,10 +15,8 @@ const styles = StyleSheet.create({
 const AppLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <SafeAreaView style={styles.container}>
-      {/* <View style={styles.content}>
-        children
-      </View> */}
-      <Navigation /> {/*navegação fixada no fundo */}
+      {}
+      <Navigation /> {}
     </SafeAreaView>
   );
 };

@@ -8,7 +8,6 @@ import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 const ProfList: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Filtra os dados com base no termo de pesquisa
   const filteredData = nursesData.filter((item) =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))

@@ -4,9 +4,29 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#f5f5f5',
+        position: 'relative',
+    },
+    userPhotoContainer: {
+        position: 'absolute',
+        top: 25,
+        right: 18,
+        width: 70,
+        height: 70,
+        borderRadius: 50,
+        overflow: 'hidden',
+        shadowColor: '#000',
+        shadowOpacity: 0.3,
+        shadowOffset: { width: 0, height: 2 },
+        shadowRadius: 4,
+        elevation: 3,
+    },
+    userPhoto: {
+        width: '100%',
+        height: '100%',
     },
     headerContainer: {
-        marginTop: 10,
+        marginTop: 20,
+        left: 15,
         marginHorizontal: 10
     },
     headerText: {
@@ -35,7 +55,6 @@ const styles = StyleSheet.create({
         width: Dimensions.get('window').width
     },
 
-    //estilos para as novas seções
     section: {
         padding: 20,
         marginBottom: 10,
@@ -51,14 +70,14 @@ const styles = StyleSheet.create({
         fontFamily: 'poppins-medium',
         color: '#212121',
         marginBottom: -6,
-        marginTop: -25,
+        marginTop: -65,
     },
     sectionTitle2: {
         fontSize: 22,
         fontFamily: 'poppins-medium',
         color: '#212121',
         marginBottom: 10,
-        marginTop: -10,
+        marginTop: -5,
     },
     sectionTitle3: {
         fontSize: 22,
@@ -67,7 +86,7 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         marginTop: 10,
     },
-    
+
     sectionDescription: {
         fontSize: 16,
         color: '#666',
@@ -77,15 +96,16 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         padding: 20,
-        borderRadius: 10,
-      },
-      textContainer: {
-        backgroundColor: 'rgba(255, 255, 255, 0.8)', // Cor de fundo semi-transparente para o texto
+        borderRadius: 20,
+        overflow: 'hidden',
+    },
+    textContainer: {
+        backgroundColor: 'rgba(255, 255, 255, 0.8)', 
         padding: 15,
+        width: '100%',
         borderRadius: 10,
-      },
+    },
 
-    //estilo p ícones de categorias
     iconRow: {
         flexDirection: 'row',
         justifyContent: 'space-around',
@@ -93,7 +113,7 @@ const styles = StyleSheet.create({
     },
     gridContainer: {
         flexDirection: 'row',
-        flexWrap: 'wrap', // Permite quebrar linha
+        flexWrap: 'wrap', 
         justifyContent: 'space-between',
         marginTop: 20,
     },
@@ -105,11 +125,11 @@ const styles = StyleSheet.create({
         fontFamily: 'poppins-regular',
         textAlign: 'center',
     },
-      iconContainer: {
+    iconContainer: {
         backgroundColor: '#fff',
-        borderRadius: 10,  // bordas arredondadas
-        width: '30%',      // tamanho do card para ocupar 3 em cada linha
-        aspectRatio: 1,    // manter o card quadrado
+        borderRadius: 10,  
+        width: '30%',     
+        aspectRatio: 1,
         alignItems: 'center',
         justifyContent: 'center',
         marginBottom: 15,
@@ -118,12 +138,12 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.1,
         shadowOffset: { width: 0, height: 2 },
         shadowRadius: 5,
-        elevation: 3,  // sombra no Android
-      },
+        elevation: 3,
+    },
 
-    //estilo do botão
     button: {
         marginTop: 20,
+        marginBottom: 10,
         backgroundColor: '#36c9d1',
         paddingVertical: 12,
         paddingHorizontal: 20,
@@ -135,8 +155,6 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontFamily: 'poppins-medium',
     },
-
-    //carrossel de dicas e depoimentos
     carousel: {
         marginTop: 10,
         height: 290,
@@ -156,34 +174,32 @@ const styles = StyleSheet.create({
         color: '#333',
     },
     articleCard: {
-        backgroundColor: '#fff',  
-        borderRadius: 10,            
-        padding: 15,                 
-        marginHorizontal: 10,       
-        width: 250,               
-        height: 220,  
-        alignItems: 'center',        
-        shadowColor: '#000',         
+        backgroundColor: '#fff',
+        borderRadius: 10,
+        padding: 15,
+        marginHorizontal: 10,
+        width: 250,
+        height: 220,
+        alignItems: 'center',
+        shadowColor: '#000',
         shadowOpacity: 0.1,
         shadowOffset: { width: 0, height: 2 },
         shadowRadius: 5,
-        elevation: 3,          
-        overflow: 'hidden',      
-      },
-      articleImage: {
-        width: 220,                  
-        height: 120,                 
-        borderRadius: 10,            
-        marginBottom: 10,            
-      },
-      articleTitle: {
+        elevation: 3,
+        overflow: 'hidden',
+    },
+    articleImage: {
+        width: 220,
+        height: 120,
+        borderRadius: 10,
+        marginBottom: 10,
+    },
+    articleTitle: {
         fontSize: 16,
         fontFamily: 'poppins-medium',
         color: '#333',
-        textAlign: 'center',         
-      },
-
-    //cards de depoimentos
+        textAlign: 'center',
+    },
     testimonialCard: {
         backgroundColor: '#fff',
         borderRadius: 10,
@@ -196,7 +212,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.1,
         shadowOffset: { width: 0, height: 2 },
         shadowRadius: 5,
-        elevation: 3,  // sombra no Android
+        elevation: 3, 
     },
     userImage: {
         width: 50,
@@ -220,8 +236,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 5,
     },
-
-    //seção de suporte
     supportText: {
         fontSize: 16,
         fontFamily: 'poppins-regular',

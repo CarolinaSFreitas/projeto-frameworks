@@ -30,8 +30,8 @@ const Navigation: React.FC = () => {
           return null;
         },
         headerShown: false,
-        tabBarActiveTintColor: '#C98EE7', // Cor dos ícones quando a aba está selecionada
-        tabBarInactiveTintColor: 'gray', // Cor dos ícones quando a aba não está selecionada
+        tabBarActiveTintColor: '#C98EE7',
+        tabBarInactiveTintColor: 'gray', 
       })}
     >
       <Tab.Screen name="Home" component={Home} />

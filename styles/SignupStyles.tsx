@@ -50,6 +50,12 @@ const styles2 = StyleSheet.create({
         borderRadius: 8,
         alignItems: 'center',
     },
+    backButton: {
+        position: 'absolute',
+        left: 20,
+        color: '#fff',
+        top: 20,
+      },
     buttonText: {
         color: '#fff',
         fontFamily: 'poppins-medium',
@@ -68,11 +74,6 @@ const styles2 = StyleSheet.create({
         fontFamily: 'poppins-extra-light',
         color: 'rgba(0, 0, 0, 0.5)',
     },
-    // backButton: {
-    //     alignSelf: 'flex-start',
-    //     marginTop: -60,
-    //     marginLeft: 10,
-    // },
     socialContainer2: {
         alignItems: 'center',
         marginVertical: 20,

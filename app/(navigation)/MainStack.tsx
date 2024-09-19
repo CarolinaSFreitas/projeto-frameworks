@@ -29,7 +29,7 @@ const MainStackNavigator: React.FC = () => {
 
           return null;
         },
-        headerShown: false, //oculta a barra de navegacao superior (header)
+        headerShown: false, 
       })}
     >
       <Tab.Screen name="Home" component={Home} />

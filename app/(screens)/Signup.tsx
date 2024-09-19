@@ -1,21 +1,21 @@
 import React from 'react';
-import { View, Text, TextInput, Pressable, Image } from 'react-native';
+import { View, Text, TextInput, Pressable, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
 import styles2 from '../../styles/SignupStyles';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const Signup = () => {
     const navigation = useNavigation();
 
     return (
         <View style={styles2.container}>
-            {/*  */}
-            <Pressable 
-                // style={styles2.backButton} 
-                // onPress={() => navigation.navigate('Login' as never)}
+            { }
+            <TouchableOpacity
+                style={styles2.backButton}
+                onPress={() => navigation.goBack()}
             >
-                <FontAwesome name="arrow-left" size={24} color="black" />
-            </Pressable>
+                <Icon name="arrow-back" size={24} color="#3EE1EA" />
+            </TouchableOpacity>
 
             <Image source={require('../../assets/images/logo.png')} style={styles2.logo} />
 
@@ -41,9 +41,9 @@ const Signup = () => {
                         placeholderTextColor={styles2.placeholderText.color}
                     />
                 </View>
-                
+
                 <View style={styles2.buttonContainer}>
-                    <Pressable 
+                    <Pressable
                         style={styles2.submitButton}
                         onPress={() => navigation.navigate('Login' as never)}
                     >
@@ -53,22 +53,22 @@ const Signup = () => {
             </View>
 
             <View style={styles2.socialContainer2}>
-                    <Text style={styles2.orText}>OU</Text>
-                    <View style={styles2.socialIcons}>
-                        <Pressable style={styles2.iconButton}>
-                            <Image source={require('../../assets/images/facebook.png')} style={styles2.icon} />
-                        </Pressable>
-                        <Pressable style={styles2.iconButton}>
-                            <Image source={require('../../assets/images/linkedin.png')} style={styles2.icon} />
-                        </Pressable>
-                        <Pressable style={styles2.iconButton}>
-                            <Image source={require('../../assets/images/gmail.png')} style={styles2.icon} />
-                        </Pressable>
-                    </View>
+                <Text style={styles2.orText}>OU</Text>
+                <View style={styles2.socialIcons}>
+                    <Pressable style={styles2.iconButton}>
+                        <Image source={require('../../assets/images/facebook.png')} style={styles2.icon} />
+                    </Pressable>
+                    <Pressable style={styles2.iconButton}>
+                        <Image source={require('../../assets/images/linkedin.png')} style={styles2.icon} />
+                    </Pressable>
+                    <Pressable style={styles2.iconButton}>
+                        <Image source={require('../../assets/images/gmail.png')} style={styles2.icon} />
+                    </Pressable>
                 </View>
+            </View>
         </View>
 
-        
+
     );
 };
 

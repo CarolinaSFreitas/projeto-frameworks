@@ -15,19 +15,28 @@ const HomeScreen: React.FC = () => {
       <View style={styles.headerContainer}>
         <Text style={styles.headerText2}>Bem-vindo(a) ao</Text>
         <Text style={styles.headerText}>Florence Care</Text>
-        <Text style={styles.subText}>Conecte-se com profissionais de saúde no conforto da sua casa</Text>
       </View>
 
+      <TouchableOpacity
+        style={styles.userPhotoContainer} 
+        onPress={() => navigation.navigate('Perfil' as never)} 
+      >
+        <Image
+          source={{ uri: 'https://media.istockphoto.com/id/1307241503/photo/beautiful-senior-woman-in-casual-clothing.jpg?s=612x612&w=0&k=20&c=povBZLzdhiaqBNO_HDIhWBxBZ0abitDMbNYYfIar7Lw=' }} // URL do ícone da foto do usuário
+          style={styles.userPhoto}
+        />
+      </TouchableOpacity>
+  
       { }
       <View style={styles.section}>
         <Text style={styles.sectionTitle2}>Como Funciona</Text>
         <ImageBackground
-          source={{ uri: 'https://img.freepik.com/free-photo/doctor-helping-senior-patient_23-2148962321.jpg' }} // Imagem de fundo sutil
+          source={{ uri: 'https://img.freepik.com/free-photo/doctor-helping-senior-patient_23-2148962321.jpg' }}
           style={styles.backgroundImage}
         >
           <View style={styles.textContainer}>
             <Text style={styles.sectionDescription}>
-              Busque, selecione e contate o profissional ideal para ajudar você com a sua saúde.
+              Busque, encontre e contate o profissional ideal para ajudar você com a sua saúde.
             </Text>
           </View>
         </ImageBackground>
@@ -65,12 +74,11 @@ const HomeScreen: React.FC = () => {
         </View>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('Profissionais' as never)} // Navegação para a tela de Profissionais
+          onPress={() => navigation.navigate('Profissionais' as never)}
         >
           <Text style={styles.buttonText}>Ver Profissionais</Text>
         </TouchableOpacity>
       </View>
-
 
       { }
       <View style={styles.section4}>
@@ -98,8 +106,6 @@ const HomeScreen: React.FC = () => {
           </View>
         </ScrollView>
       </View>
-
-
 
       { }
       <View style={styles.section4}>
