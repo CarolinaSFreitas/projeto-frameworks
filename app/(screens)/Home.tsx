@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity, ScrollView, Image, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import styles from '../../styles/HomeStyles';
-import Wave from '../(components)/Wave';
+import Wave from '../(components)/Banner';
 import DepoimentosData from '../(data)/TestemonialData';
 
 const HomeScreen: React.FC = () => {
@@ -29,7 +29,6 @@ const HomeScreen: React.FC = () => {
 
       { }
       <View style={styles.section}>
-        <Text style={styles.sectionTitle2}>Como Funciona</Text>
         <ImageBackground
           source={{ uri: 'https://img.freepik.com/free-photo/doctor-helping-senior-patient_23-2148962321.jpg' }}
           style={styles.backgroundImage}

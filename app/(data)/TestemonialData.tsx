@@ -14,6 +14,17 @@ const DepoimentosData = [
     name: 'Ana Costa',
     comment: 'Minha mãe é idosa e tínhamos muita dificuldade em encontrar uma cuidadora que atendesse às nossas necessidades. O Florence Care foi incrível e encontramos a profissional perfeita para cuidar da minha mãe. Ela está recebendo todo o carinho e atenção necessários, e isso trouxe muita paz para nossa família.',
   },
+  {
+    photo: 'https://media.istockphoto.com/id/1005817658/photo/middle-aged-man-with-pleasant-face-expression.jpg?s=612x612&w=0&k=20&c=3YTdAT-m9io-zEF2aOmJsRz7tKVHlHSHvDFSILp6FAY=',
+    name: 'Carlos Almeida',
+    comment: 'Recentemente, passei por uma cirurgia e precisava de cuidados pós-operatórios em casa. Estou muito agradecido pelo atendimento e pelo profissionalismo.',
+  },
+  {
+    photo: 'https://media.istockphoto.com/id/1446887567/photo/grandmother-mom-and-child-hug-in-a-portrait-for-mothers-day-on-a-house-sofa-as-a-happy-family.jpg?b=1&s=170667a&w=0&k=20&c=LQ1B_kWV8dXqxS6I6CbLNaQal2zcoo7WztP9prpA7ds=',
+    name: 'Júlia Martins',
+    comment: 'A experiência com o Florence Care tem sido excelente. O serviço foi além das minhas expectativas, oferecendo um atendimento de alta qualidade para a minha avó, que tem necessidades especiais. A dedicação e o carinho dos profissionais realmente fazem a diferença.',
+  },
 ];
+
 
 export default DepoimentosData;
