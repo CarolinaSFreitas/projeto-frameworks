@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
   },
   headerContainer: {
-    backgroundColor: '#C98EE7', 
+    backgroundColor: '#C98EE7',
     paddingVertical: 20,
     alignItems: 'center',
     justifyContent: 'center',
@@ -47,12 +47,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#36c9d1',
     padding: 10,
     borderRadius: 50,
-    zIndex: 1, 
+    zIndex: 1,
   },
   attendanceContainer: {
     marginTop: 20,
     paddingHorizontal: 20,
-    flex: 1, 
+    flex: 1,
   },
   attendanceTitle: {
     fontSize: 18,
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 15,
     marginBottom: 10,
-    elevation: 1, 
+    elevation: 1,
   },
   attendanceDate: {
     fontSize: 14,
@@ -88,42 +88,83 @@ const styles = StyleSheet.create({
   modalContent: {
     backgroundColor: '#fff',
     borderRadius: 10,
-    padding: 20,
-    width: '80%',
-    maxHeight: '80%',
+    padding: 25,
+    width: '85%',
+    maxHeight: '75%',
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 6.68,
+    elevation: 11,
   },
+  divider: {
+    height: 1,
+    backgroundColor: '#e0e0e0',
+    marginVertical: 10,
+  },
+
   modalTitle: {
-    fontSize: 18,
-    fontFamily: 'poppins-medium',
-    marginBottom: 10,
+    fontSize: 20,
+    fontFamily: 'Poppins-Bold',
+    marginBottom: 15,
+    color: '#333',
+    textAlign: 'center',
   },
   modalDate: {
-    fontSize: 14,
-    marginBottom: 5,
+    fontSize: 16,
+    marginBottom: 8,
+    color: '#555',
   },
   modalProfessional: {
-    fontSize: 14,
-    marginBottom: 5,
+    fontSize: 16,
+    marginBottom: 8,
+    color: '#555',
   },
   modalSubject: {
-    fontSize: 14,
-    marginBottom: 5,
+    fontSize: 16,
+    marginBottom: 8,
+    color: '#555',
   },
   modalNotes: {
-    fontSize: 14,
-    marginBottom: 10,
+    fontSize: 16,
+    marginBottom: 15,
     color: '#212121',
+    lineHeight: 22,
+  },
+  modalTextContainer: {
+    flexDirection: 'column',
+    marginBottom: 10,
+  },
+  modalLabel: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: '#333',
+  },
+  modalValueBelow: {
+    fontSize: 14,
+    color: '#212121',
+    textAlign: 'left',
+    marginTop: 5,
+  },
+  modalValue: {
+    fontSize: 14,
   },
   closeButton: {
     backgroundColor: '#36c9d1',
-    padding: 10,
-    borderRadius: 5,
+    padding: 12,
+    borderRadius: 40,
     alignItems: 'center',
+    marginTop: 20,
   },
   closeButtonText: {
     color: '#fff',
     fontSize: 16,
+    fontFamily: 'Poppins-Regular',
   },
+
 });
 
 export default styles;

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Image, FlatList, Modal } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import Icon from 'react-native-vector-icons/MaterialIcons'; 
-import { atendimentos } from '../(data)/AppointmentData'; 
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import { atendimentos } from '../(data)/AppointmentData';
 import styles from '../../styles/UserStyles';
 
 const UserProfile: React.FC = () => {
@@ -70,10 +70,24 @@ const UserProfile: React.FC = () => {
             <Text style={styles.modalTitle}>Detalhes do Atendimento</Text>
             {selectedAppointment && (
               <>
-                <Text style={styles.modalDate}>Data: {selectedAppointment.data}</Text>
-                <Text style={styles.modalProfessional}>Profissional: {selectedAppointment.profissional} ({selectedAppointment.tipo})</Text>
-                <Text style={styles.modalSubject}>Assunto: {selectedAppointment.assunto}</Text>
-                <Text style={styles.modalNotes}>Anotações do Profissional: {selectedAppointment.anotacoes}</Text>
+                <View style={styles.modalTextContainer}>
+                  <Text style={styles.modalLabel}>Data: </Text>
+                  <Text style={styles.modalValue}>{selectedAppointment.data}</Text>
+                </View>
+                <View style={styles.modalTextContainer}>
+                  <Text style={styles.modalLabel}>Profissional: </Text>
+                  <Text style={styles.modalValue}>{selectedAppointment.profissional} ({selectedAppointment.tipo})</Text>
+                </View>
+                <View style={styles.modalTextContainer}>
+                  <Text style={styles.modalLabel}>Assunto: </Text>
+                  <Text style={styles.modalValue}>{selectedAppointment.assunto}</Text>
+                </View>
+                <View style={styles.modalTextContainer}>
+                  <Text style={styles.modalLabel}>Anotações do Profissional:</Text>
+                  <Text style={styles.modalValueBelow}>{selectedAppointment.anotacoes}</Text>
+                </View>
+
+
               </>
             )}
             <TouchableOpacity
