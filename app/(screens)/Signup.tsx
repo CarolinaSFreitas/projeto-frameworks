@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, Pressable, StyleSheet, Image } from 'react-native';
+import { View, Text, TextInput, Pressable, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import styles2 from '../../styles/SignupStyles';

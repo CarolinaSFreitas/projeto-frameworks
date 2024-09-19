@@ -5,7 +5,7 @@ import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import styles from '../../styles/FooterStyles';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
-import { RootStackParamList } from '../(components)/types'; 
+import { RootStackParamList } from '../(types)/types'; 
 
 type FooterNavigationProp = NavigationProp<RootStackParamList>;
 

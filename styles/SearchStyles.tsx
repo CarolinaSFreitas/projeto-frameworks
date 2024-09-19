@@ -15,6 +15,8 @@ const styles = StyleSheet.create({
     borderColor: '#ddd',
     borderWidth: 1,
     borderRadius: 5,
+    fontFamily: 'poppins-light',
+
     paddingHorizontal: 10,
   },
   searchIcon: {

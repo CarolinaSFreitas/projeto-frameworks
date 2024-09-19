@@ -36,7 +36,8 @@ const stylesNurses = StyleSheet.create({
   },
   name: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontFamily: 'poppins-medium',
+    color: '#212121',
   },
   formation: {
     fontSize: 16,
@@ -49,6 +50,7 @@ const stylesNurses = StyleSheet.create({
   description: {
     marginVertical: 5,
     fontSize: 14,
+    fontFamily: 'poppins-regular',
     color: '#777',
   },
   tagsContainer: {
@@ -67,6 +69,7 @@ const stylesNurses = StyleSheet.create({
   tagText: {
     fontSize: 12,
     color: '#555',
+    fontFamily: 'poppins-light',
   },
   buttonContainer: {
     flexDirection: 'row',
@@ -89,6 +92,7 @@ const stylesNurses = StyleSheet.create({
   buttonText: {
     color: '#fff',
     fontSize: 14,
+    fontFamily: 'poppins-light',
     textAlign: 'center',
   },
 });

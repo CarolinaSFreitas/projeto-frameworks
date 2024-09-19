@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Pressable, Image, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Pressable, Image } from 'react-native';
 import styles from '../../styles/LoginStyles';
 import styles2 from '../../styles/SignupStyles';
 import { useNavigation } from '@react-navigation/native';
