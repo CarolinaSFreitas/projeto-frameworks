@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         padding: 20,
-        borderRadius: 20,
+        borderRadius: 12,
         overflow: 'hidden',
     },
     textContainer: {
