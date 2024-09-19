@@ -6,7 +6,7 @@ const nursesData = [
     specialization: 'Práticas Integrativas',
     description: 'Especialista em práticas integrativas complementares, como reiki, cromoterapia e aromaterapia, que auxiliam no bem-estar físico e mental. Oferece acompanhamento domiciliar no trabalho de parto e amamentação. Experiência em colocação de sondas, curativos especializados e implantes contraceptivos.',
     tags: ['Reiki', 'Cromoterapia', 'Aromaterapia', 'Acompanhamento Domiciliar', 'Implantes Contraceptivos'],
-    photo: 'https://via.placeholder.com/150',
+    photo: 'https://st3.depositphotos.com/1518767/13263/i/450/depositphotos_132634644-stock-photo-female-surgeon-standing-in-hospital.jpg',
     rating: 5,
   },
   {
@@ -16,7 +16,7 @@ const nursesData = [
     specialization: 'Dieta Personalizada',
     description: 'Especialista em nutrição personalizada, com foco em dietas específicas para condições de saúde, como diabetes, hipertensão e obesidade. Desenvolve planos alimentares balanceados e monitora o progresso dos pacientes. Experiência em avaliação nutricional e reeducação alimentar para promover uma vida saudável.',
     tags: ['Reeducação Alimentar', 'Dietas Específicas', 'Acompanhamento Nutricional'],
-    photo: 'https://via.placeholder.com/150',
+    photo: 'https://www.shutterstock.com/image-photo/young-arab-man-wearing-nutritionist-260nw-2193422969.jpg',
     rating: 4.6,
   },
   {
@@ -26,7 +26,7 @@ const nursesData = [
     specialization: 'Sondas',
     description: 'Experiência em administração e manejo de sondas, incluindo sondas nasogástricas e vesicais. Realiza procedimentos para garantir a manutenção adequada e o conforto do paciente. Também especializada em injeções e curativos, oferecendo um cuidado abrangente.',
     tags: ['Sondas', 'Injeções', 'Vacinas', 'Curativos'],
-    photo: 'https://via.placeholder.com/150',
+    photo: 'https://media.istockphoto.com/id/1416945607/photo/portrait-of-a-doctors-intern-in-the-university-building.jpg?s=612x612&w=0&k=20&c=EJd8PElKT_x8AFKQFtE5NguFiPuOJe1-VO_rIGgxnl0=',
     rating: 4.6,
   },
   {
@@ -36,7 +36,7 @@ const nursesData = [
     specialization: 'Reabilitação Física',
     description: 'Ajuda pacientes a recuperar habilidades para realizar atividades diárias após lesões ou doenças. Trabalha com pacientes para melhorar a coordenação, força e habilidades motoras. Utiliza técnicas terapêuticas para promover a independência e a qualidade de vida.',
     tags: ['Reabilitação', 'Atividades Diárias', 'Apoio'],
-    photo: 'https://via.placeholder.com/150',
+    photo: 'https://thumbs.dreamstime.com/b/toddler-girl-child-occupational-therapy-session-doing-sensory-playful-exercises-her-therapist-139625429.jpg',
     rating: 4.6,
   },
   {
@@ -46,7 +46,7 @@ const nursesData = [
     specialization: 'Reabilitação Pós-Cirúrgica',
     description: 'Especialista em reabilitação física após cirurgias ortopédicas e neurológicas. Elabora e aplica programas de exercícios para promover a recuperação completa e a restauração da mobilidade. Acompanha o progresso do paciente e ajusta os tratamentos conforme necessário.',
     tags: ['Fisioterapia', 'Reabilitação', 'Exercícios'],
-    photo: 'https://via.placeholder.com/150',
+    photo: 'https://riverstonewellness.ca/wp-content/uploads/2022/02/when-to-see-a-physiotherapist.jpg',
     rating: 4.6,
   },
   {
@@ -56,7 +56,7 @@ const nursesData = [
     specialization: 'Tratamento de Disfagia',
     description: 'Experiência no tratamento de dificuldades de deglutição e distúrbios da fala. Realiza avaliações detalhadas e desenvolve planos de tratamento personalizados. Trabalha para melhorar a comunicação e a segurança alimentar dos pacientes.',
     tags: ['Disfagia', 'Fala', 'Comunicação'],
-    photo: 'https://via.placeholder.com/150',
+    photo: 'https://www.shutterstock.com/image-photo/otoscopy-hearing-checkup-boy-audiology-600nw-2108007530.jpg',
     rating: 4.6,
   },
   {
@@ -66,7 +66,7 @@ const nursesData = [
     specialization: 'Assistência Domiciliar',
     description: 'Proporciona cuidados e apoio diário para idosos, incluindo auxílio em atividades diárias como alimentação e higiene. Garante o bem-estar geral dos pacientes, oferecendo companhia e suporte emocional. Experiência em lidar com diversas necessidades de cuidados.',
     tags: ['Assistência Domiciliar', 'Idosos', 'Apoio Diário'],
-    photo: 'https://via.placeholder.com/150',
+    photo: 'https://t3.ftcdn.net/jpg/05/32/75/42/360_F_532754271_JgYz92m81MCtcgh4OIEvB2yT2Zu7oxQn.jpg',
     rating: 4.6,
   },
   {
@@ -76,7 +76,7 @@ const nursesData = [
     specialization: 'Cuidados Gerais',
     description: 'Oferece suporte e cuidados gerais em ambientes domiciliares e instituições de saúde. Realiza monitoramento de sinais vitais, administração de medicamentos e assistência em atividades diárias. Experiência em atender a diferentes perfis de pacientes e suas necessidades.',
     tags: ['Cuidados Gerais', 'Suporte', 'Ambientes Domiciliares'],
-    photo: 'https://via.placeholder.com/150',
+    photo: 'https://img.freepik.com/free-photo/black-nurse-their-workspace_52683-100580.jpg',
     rating: 4.6,
   },
   {
@@ -86,7 +86,7 @@ const nursesData = [
     specialization: 'Apoio a Pacientes com Mobilidade Reduzida',
     description: 'Oferece suporte psicológico contínuo para pacientes com dificuldades de mobilidade ou em tratamento prolongado em casa. Trabalha para melhorar o bem-estar emocional e ajustar o suporte psicológico às necessidades individuais dos pacientes. Auxilia na adaptação ao ambiente domiciliar e no enfrentamento das limitações.',
     tags: ['Psicologia', 'Mobilidade Reduzida', 'Apoio Emocional', 'Tratamento Domiciliar'],
-    photo: 'https://via.placeholder.com/150',
+    photo: 'https://st2.depositphotos.com/1518767/7617/i/450/depositphotos_76170613-stock-photo-psychologist-sitting-on-the-couch.jpg',
     rating: 4.6,
   },
   {
@@ -96,7 +96,7 @@ const nursesData = [
     specialization: 'Assistência Domiciliar',
     description: 'Proporciona cuidados e apoio diário para idosos, incluindo auxílio em atividades diárias como alimentação, mobilidade e higiene pessoal. Foca na promoção do conforto e bem-estar do paciente, oferecendo companhia e suporte emocional. Experiência em criar um ambiente seguro e acolhedor em casa, garantindo uma assistência completa e atenciosa.',
     tags: ['Assistência Domiciliar', 'Idosos', 'Apoio Diário'],
-    photo: 'https://via.placeholder.com/150',
+    photo: 'https://media.istockphoto.com/id/1354179181/photo/shot-of-an-attractive-young-nurse-bonding-with-her-senior-patient-outside.jpg?s=612x612&w=0&k=20&c=lgTjWbC1K44z97F6sbd2hnbj2ac-wgO6gN_u3c1QAqc=',
     rating: 4.6,
   },
 ];
