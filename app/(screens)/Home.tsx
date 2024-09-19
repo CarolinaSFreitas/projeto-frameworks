@@ -18,15 +18,15 @@ const HomeScreen: React.FC = () => {
       </View>
 
       <TouchableOpacity
-        style={styles.userPhotoContainer} 
-        onPress={() => navigation.navigate('Perfil' as never)} 
+        style={styles.userPhotoContainer}
+        onPress={() => navigation.navigate('Perfil' as never)}
       >
         <Image
           source={{ uri: 'https://media.istockphoto.com/id/1307241503/photo/beautiful-senior-woman-in-casual-clothing.jpg?s=612x612&w=0&k=20&c=povBZLzdhiaqBNO_HDIhWBxBZ0abitDMbNYYfIar7Lw=' }} // URL do ícone da foto do usuário
           style={styles.userPhoto}
         />
       </TouchableOpacity>
-  
+
       { }
       <View style={styles.section}>
         <Text style={styles.sectionTitle2}>Como Funciona</Text>
@@ -47,27 +47,27 @@ const HomeScreen: React.FC = () => {
         <Text style={styles.sectionTitle}>Categorias de Profissionais</Text>
         <View style={styles.gridContainer}>
           <View style={styles.iconContainer}>
-            <Text>🩺</Text>
+            <Text style={[styles.iconEmoji, { fontSize: 40 }]}>🩺</Text>
             <Text style={styles.iconText}>Enfermagem</Text>
           </View>
           <View style={styles.iconContainer}>
-            <Text>🍏</Text>
+            <Text style={[styles.iconEmoji, { fontSize: 40 }]}>🍎</Text>
             <Text style={styles.iconText}>Nutrição</Text>
           </View>
           <View style={styles.iconContainer}>
-            <Text>🧠</Text>
+            <Text style={[styles.iconEmoji, { fontSize: 40 }]}>🧠</Text>
             <Text style={styles.iconText}>Psicologia</Text>
           </View>
           <View style={styles.iconContainer}>
-            <Text>💪</Text>
+            <Text style={[styles.iconEmoji, { fontSize: 40 }]}>💪</Text>
             <Text style={styles.iconText}>Fisioterapia</Text>
           </View>
           <View style={styles.iconContainer}>
-            <Text>🧑‍🦽</Text>
+            <Text style={[styles.iconEmoji, { fontSize: 40 }]}>🧩</Text>
             <Text style={styles.iconText}>Terapia Ocupacional</Text>
           </View>
           <View style={styles.iconContainer}>
-            <Text>👵</Text>
+            <Text style={[styles.iconEmoji, { fontSize: 40 }]}>👵</Text>
             <Text style={styles.iconText}>Cuidador(a) de Idosos</Text>
           </View>
 
@@ -84,7 +84,7 @@ const HomeScreen: React.FC = () => {
       <View style={styles.section4}>
         <Text style={styles.sectionTitle}>Artigos Recomendados</Text>
         <ScrollView horizontal style={styles.carousel} showsHorizontalScrollIndicator={false}>
-        <View style={styles.articleCard}>
+          <View style={styles.articleCard}>
             <Image source={{ uri: 'https://st2.depositphotos.com/1594308/5996/i/450/depositphotos_59965493-stock-photo-psychiatrist-hands-holding-palm-of.jpg' }} style={styles.articleImage} />
             <Text style={styles.articleTitle}>Como melhorar sua saúde mental</Text>
           </View>
@@ -111,7 +111,7 @@ const HomeScreen: React.FC = () => {
       <View style={styles.section4}>
         <Text style={styles.sectionTitle}>Depoimentos</Text>
         <ScrollView horizontal style={styles.carousel} showsHorizontalScrollIndicator={false}>
-        {DepoimentosData.map((item, index) => (
+          {DepoimentosData.map((item, index) => (
             <View key={index} style={styles.testimonialCard}>
               <Image
                 source={{ uri: item.photo }}

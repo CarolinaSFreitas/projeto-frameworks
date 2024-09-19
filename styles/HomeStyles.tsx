@@ -54,7 +54,10 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: Dimensions.get('window').width
     },
-
+    iconEmoji: {
+        fontSize: 40,  
+        textAlign: 'center',  
+      },      
     section: {
         padding: 20,
         marginBottom: 10,
