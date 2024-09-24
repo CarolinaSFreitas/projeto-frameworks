@@ -1,20 +1,36 @@
-import React from 'react';
-import { Dimensions, View, ViewStyle, StyleSheet } from 'react-native';
+import React, { useState, useEffect } from 'react'; 
+import { View, ViewStyle, StyleSheet, Dimensions } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 
 interface WaveProps {
   customStyles?: ViewStyle;
 }
 
-const { width } = Dimensions.get('window');
-
 const Wave: React.FC<WaveProps> = ({ customStyles }) => {
+  const [windowWidth, setWindowWidth] = useState(Dimensions.get('window').width);
+
+  useEffect(() => {
+    const updateDimensions = () => {
+      const { width } = Dimensions.get('window');
+      setWindowWidth(width);
+    };
+  
+    const subscription = Dimensions.addEventListener('change', updateDimensions);
+
+    return () => {
+      subscription.remove(); 
+    };
+  }, []);
+
+  const svgHeight = 320;
+  const svgWidth = Math.max(windowWidth, 1440);
+
   return (
     <View style={[styles.container, customStyles]}>
       <View style={styles.waveBackground}>
         <Svg
-          width={width * 3} 
-          height={320}
+          width={svgWidth}
+          height={svgHeight}
           viewBox="0 0 1440 320"
           preserveAspectRatio="xMidYMid slice"
           style={styles.svg}
@@ -31,7 +47,7 @@ const Wave: React.FC<WaveProps> = ({ customStyles }) => {
 
 const styles = StyleSheet.create({
   container: {
-    width: '300%',
+    width: '100%',
     height: 140,
     overflow: 'hidden',
   },
