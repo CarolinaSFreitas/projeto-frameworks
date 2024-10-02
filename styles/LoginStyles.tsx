@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
     },
     errorText: {
-        color: '#B71C1C',
+        color: 'red',
         marginBottom: 8,
         fontFamily: 'poppins-light',
         textAlign: 'center',

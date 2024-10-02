@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Pressable, Image } from 'react-native';
 import styles from '../../styles/LoginStyles';
 import styles2 from '../../styles/SignupStyles';
@@ -12,18 +12,36 @@ const Login = ({ onLogin }: LoginProps) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    const [isTouched, setIsTouched] = useState(false);
+    const [isFormValid, setIsFormValid] = useState(false); 
 
     const navigation = useNavigation();
 
-    const handleLogin = () => {
+    const validateEmail = (email: string) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!username || !password) {
-            setErrorMessage('Por favor, preencha todos os campos.');
-        } else if (!emailRegex.test(username)) {
-            setErrorMessage('Por favor, insira um e-mail válido.');
+        return emailRegex.test(email);
+    };
+
+    useEffect(() => {
+        if (isTouched) {
+            if (!username || !password) {
+                setErrorMessage('Por favor, preencha todos os campos.');
+                setIsFormValid(false); 
+            } else if (!validateEmail(username)) {
+                setErrorMessage('Por favor, insira um e-mail válido.');
+                setIsFormValid(false); 
+            } else {
+                setErrorMessage('');  
+                setIsFormValid(true);  
+            }
+        }
+    }, [username, password, isTouched]);
+
+    const handleLogin = () => {
+        if (isFormValid) {
+            onLogin(true);  
         } else {
-            setErrorMessage('');
-            onLogin(true);
+            alert('Por favor, preencha corretamente os campos antes de continuar.');  // Alerta simples
         }
     };
 
@@ -39,34 +57,44 @@ const Login = ({ onLogin }: LoginProps) => {
                     <TextInput
                         placeholder="Digite seu e-mail"
                         value={username}
-                        onChangeText={setUsername}
+                        onChangeText={(text) => {
+                            setUsername(text);
+                            setIsTouched(true);
+                        }}
                         style={styles.input}
                         placeholderTextColor={styles.placeholderText.color}
                         inputMode="email"
+                        onFocus={() => setIsTouched(true)}
                     />
                 </View>
-                
+
                 <View style={styles.inputContainer}>
                     <Text style={styles.inputLabel}>Senha:</Text>
                     <TextInput
                         placeholder="Digite sua senha"
                         value={password}
-                        onChangeText={setPassword}
+                        onChangeText={(text) => {
+                            setPassword(text);
+                            setIsTouched(true);
+                        }}
                         secureTextEntry
                         style={styles.input}
                         placeholderTextColor={styles.placeholderText.color}
+                        onFocus={() => setIsTouched(true)}
                     />
                 </View>
 
-                {errorMessage ? <Text style={styles.errorText}>{errorMessage}</Text> : null}
+                {isTouched && errorMessage ? <Text style={styles.errorText}>{errorMessage}</Text> : null}
 
                 <View style={styles.buttonContainer}>
-                    <Pressable 
+                    <Pressable
                         style={({ pressed }) => [
                             styles.loginButton,
-                            { opacity: pressed ? 0.7 : 1 }
+                            { opacity: pressed ? 0.7 : 1 },
+                            !isFormValid && { opacity: 0.5 },  
                         ]}
                         onPress={handleLogin}
+                        disabled={!isFormValid}  
                     >
                         <Text style={styles.buttonText}>Entrar</Text>
                     </Pressable>
@@ -88,7 +116,7 @@ const Login = ({ onLogin }: LoginProps) => {
                 </View>
 
                 <View style={styles.buttonContainer}>
-                    <Pressable 
+                    <Pressable
                         style={({ pressed }) => [
                             styles2.submitButton,
                             { opacity: pressed ? 0.7 : 1 }

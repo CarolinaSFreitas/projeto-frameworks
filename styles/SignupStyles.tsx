@@ -85,6 +85,12 @@ const styles2 = StyleSheet.create({
         marginVertical: 10,
         fontFamily: 'poppins-medium',
     },
+    errorText: {
+        color: 'red',
+        fontFamily: 'poppins-light',
+        fontSize: 14,
+        marginTop: 5,
+    },
     socialIcons: {
         flexDirection: 'row',
         justifyContent: 'space-around', 
