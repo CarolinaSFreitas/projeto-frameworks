@@ -19,6 +19,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     width: '80%',
   },
+  logoutButton: {
+    position: 'absolute',
+    right: 5,
+    top: 20,
+    fontFamily: 'Poppins-Regular',
+  },  
   userIcon: {
     width: 100,
     height: 100,
@@ -108,7 +114,7 @@ const styles = StyleSheet.create({
 
   modalTitle: {
     fontSize: 20,
-    fontFamily: 'Poppins-Bold',
+    fontFamily: 'Poppins-Medium',
     marginBottom: 15,
     color: '#333',
     textAlign: 'center',

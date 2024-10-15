@@ -3,24 +3,39 @@ import { View, Text, TextInput, Pressable, Image } from 'react-native';
 import styles from '../../styles/LoginStyles';
 import styles2 from '../../styles/SignupStyles';
 import { useNavigation } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParamList } from '../(types)/types';
 
-type LoginProps = {
-    onLogin: (isLoggedIn: boolean) => void;
-};
+
+
+type LoginNavigationProp = StackNavigationProp<RootStackParamList, 'Login'>;
 
 const Login = ({ onLogin }: LoginProps) => {
+    const navigation = useNavigation<LoginNavigationProp>();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [isTouched, setIsTouched] = useState(false);
     const [isFormValid, setIsFormValid] = useState(false); 
 
-    const navigation = useNavigation();
-
     const validateEmail = (email: string) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     };
+
+    // Verifica se o usuário já está logado
+    useEffect(() => {
+        const checkLogin = async () => {
+            const storedEmail = await AsyncStorage.getItem('userEmail');
+            if (storedEmail) {
+                onLogin(true); 
+                navigation.navigate('Home');  
+            }
+        };
+
+        checkLogin();
+    }, []);
 
     useEffect(() => {
         if (isTouched) {
@@ -37,20 +52,31 @@ const Login = ({ onLogin }: LoginProps) => {
         }
     }, [username, password, isTouched]);
 
-    const handleLogin = () => {
+    const handleLogin = async () => {
         if (isFormValid) {
-            onLogin(true);  
+            try {
+                const storedEmail = await AsyncStorage.getItem('userEmail');
+                const storedPassword = await AsyncStorage.getItem('userPassword');
+
+                if (storedEmail === username && storedPassword === password) {
+                    alert('Login realizado com sucesso!');
+                    onLogin(true);  
+                    navigation.navigate('Home');  
+                } else {
+                    setErrorMessage('E-mail ou senha incorretos.');
+                }
+            } catch (error) {
+                console.error('Error fetching data', error);
+            }
         } else {
-            alert('Por favor, preencha corretamente os campos antes de continuar.');  // Alerta simples
+            alert('Por favor, preencha corretamente os campos antes de continuar.');
         }
     };
 
     return (
         <View style={styles.container}>
             <Image source={require('../../assets/images/logo.png')} style={styles.logo} />
-
             <Text style={styles.customFontText}>Florence Care</Text>
-
             <View style={styles.formContainer}>
                 <View style={styles.inputContainer}>
                     <Text style={styles.inputLabel}>E-mail:</Text>

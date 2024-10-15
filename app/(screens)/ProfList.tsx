@@ -10,7 +10,7 @@ const ProfList: React.FC = () => {
 
   const filteredData = nursesData.filter((item) =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+    item.tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase()))
   );
 
   const renderNurseItem = ({ item }: { item: any }) => (

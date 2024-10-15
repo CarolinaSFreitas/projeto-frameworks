@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Pressable, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParamList } from '../(types)/types';
 import styles2 from '../../styles/SignupStyles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+type SignupNavigationProp = StackNavigationProp<RootStackParamList, 'Signup'>;
 
 const Signup = () => {
-    const navigation = useNavigation();
+    const navigation = useNavigation<SignupNavigationProp>();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -40,6 +45,18 @@ const Signup = () => {
         setIsPasswordValid(hasMinimumLength && hasNumber);
     };
 
+    const handleSignup = async () => {
+        if (isEmailValid && isPasswordValid) {
+            try {
+                await AsyncStorage.setItem('userEmail', email);
+                await AsyncStorage.setItem('userPassword', password);
+                navigation.navigate('Login');
+            } catch (error) {
+                console.error('Error saving data', error);
+            }
+        }
+    };
+
     return (
         <View style={styles2.container}>
             <TouchableOpacity
@@ -54,7 +71,6 @@ const Signup = () => {
             <Text style={styles2.customFontText}>Crie sua conta</Text>
 
             <View style={styles2.formContainer}>
-                {}
                 <View style={styles2.inputContainer}>
                     <Text style={styles2.inputLabel}>E-mail:</Text>
                     <TextInput
@@ -68,11 +84,9 @@ const Signup = () => {
                         }}
                         inputMode="email"
                     />
-                    {}
                     {emailErrorMessage ? <Text style={styles2.errorText}>{emailErrorMessage}</Text> : null}
-                    </View>
+                </View>
 
-                {}
                 <View style={styles2.inputContainer}>
                     <Text style={styles2.inputLabel}>Senha:</Text>
                     <TextInput
@@ -83,19 +97,17 @@ const Signup = () => {
                         value={password}
                         onChangeText={(text) => {
                             setPassword(text);
-                            validatePassword(text); 
+                            validatePassword(text);
                         }}
                     />
-                    {}
                     {passwordErrorMessage ? <Text style={styles2.errorText}>{passwordErrorMessage}</Text> : null}
-                    </View>
+                </View>
 
-                {}
                 <View style={styles2.buttonContainer}>
                     <Pressable
                         style={styles2.submitButton}
-                        onPress={() => navigation.navigate('Login' as never)}
-                        disabled={!isEmailValid || !isPasswordValid} 
+                        onPress={handleSignup}
+                        disabled={!isEmailValid || !isPasswordValid}
                     >
                         <Text style={styles2.buttonText}>Cadastrar</Text>
                     </Pressable>
