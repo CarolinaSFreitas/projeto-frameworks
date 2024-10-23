@@ -11,7 +11,7 @@ const ProfList: React.FC = () => {
   //função para buscar os profissionais da API
   const fetchProfessionals = async () => {
     try {
-      const response = await fetch('https://animated-memory-7grp4x96v52rjvv-3000.app.github.dev/professionals');
+      const response = await fetch('http://localhost:3000/professionals');
       const data = await response.json();
       setProfessionalsData(data);
     } catch (error) {

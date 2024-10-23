@@ -22,7 +22,7 @@ const HomeScreen: React.FC = () => {
         onPress={() => navigation.navigate('Perfil' as never)}
       >
         <Image
-          source={{ uri: 'https://media.istockphoto.com/id/1307241503/photo/beautiful-senior-woman-in-casual-clothing.jpg?s=612x612&w=0&k=20&c=povBZLzdhiaqBNO_HDIhWBxBZ0abitDMbNYYfIar7Lw=' }} // URL do ícone da foto do usuário
+          source={{ uri: 'https://img.freepik.com/premium-photo/cheerful-positive-pretty-mature-lady-candid-face-portrait-happy-attractive-black-haired-middle-aged-woman-looking-away-with-toothy-smile-laughing-having-fun-facial-close-up_650366-7226.jpg' }}
           style={styles.userPhoto}
         />
       </TouchableOpacity>
@@ -84,23 +84,23 @@ const HomeScreen: React.FC = () => {
         <Text style={styles.sectionTitle}>Artigos Recomendados</Text>
         <ScrollView horizontal style={styles.carousel} showsHorizontalScrollIndicator={false}>
           <View style={styles.articleCard}>
-            <Image source={{ uri: 'https://st2.depositphotos.com/1594308/5996/i/450/depositphotos_59965493-stock-photo-psychiatrist-hands-holding-palm-of.jpg' }} style={styles.articleImage} />
+            <Image source={{ uri: 'https://images.yourstory.com/cs/5/803961002d6d11e9aa979329348d4c3e/Take-1602002793875.png?fm=png&auto=format&blur=500' }} style={styles.articleImage} />
             <Text style={styles.articleTitle}>Como melhorar sua saúde mental</Text>
           </View>
           <View style={styles.articleCard}>
-            <Image source={{ uri: 'https://media.istockphoto.com/id/1457433817/photo/group-of-healthy-food-for-flexitarian-diet.jpg?s=612x612&w=0&k=20&c=v48RE0ZNWpMZOlSp13KdF1yFDmidorO2pZTu2Idmd3M=' }} style={styles.articleImage} />
+            <Image source={{ uri: 'https://scrippsamg.com/wp-content/uploads/2023/02/Immune_Boosting_Foods_5.jpg' }} style={styles.articleImage} />
             <Text style={styles.articleTitle}>Alimentos que ajudam na imunidade</Text>
           </View>
           <View style={styles.articleCard}>
-            <Image source={{ uri: 'https://media.istockphoto.com/id/1396691293/pt/foto/medical-worker-helping-his-patient-to-move-around-the-apartment.jpg?s=612x612&w=0&k=20&c=3r8hUUfAznNmAJQp_sd55oDuoHhS8H-HfeWawpV_RM8=' }} style={styles.articleImage} />
+            <Image source={{ uri: 'https://img-cdn.inc.com/image/upload/w_1024,h_576,c_fill/images/panoramic/therapy_440305_nyrbrk.jpg' }} style={styles.articleImage} />
             <Text style={styles.articleTitle}>Cuidados com Idosos com Alzheimer</Text>
           </View>
           <View style={styles.articleCard}>
-            <Image source={{ uri: 'https://media.istockphoto.com/id/1428417112/photo/physiotherapy-doctor-senior-patient-and-leg-surgery-physical-therapy-and-orthopedic-healing.jpg?s=612x612&w=0&k=20&c=NK5v7uZ6xzcZiyPeEh9gfFrcOY7KWh4jMcsAsYSl8kc=' }} style={styles.articleImage} />
+            <Image source={{ uri: 'https://img.freepik.com/free-vector/physiotherapy-rehabilitation-people-flat-icons-collection_1284-15880.jpg' }} style={styles.articleImage} />
             <Text style={styles.articleTitle}>Como a Fisioterapia Traz Bons Resultados</Text>
           </View>
           <View style={styles.articleCard}>
-            <Image source={{ uri: 'https://st2.depositphotos.com/1518767/11492/i/450/depositphotos_114923368-stock-photo-therapist-performing-reiki-on-woman.jpg' }} style={styles.articleImage} />
+            <Image source={{ uri: 'https://focus.belfasttelegraph.co.uk/thumbor/j9aTaGxQMYmhwq9RDUuen3QLYg0=/960x640/smart/prod-mh-ireland/c6fed4a4-968b-11ed-873a-0210609a3fe2.JPG' }} style={styles.articleImage} />
             <Text style={styles.articleTitle}>Benefícios do Reiki e Redução de Estresse</Text>
           </View>
         </ScrollView>

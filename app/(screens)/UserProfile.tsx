@@ -47,7 +47,7 @@ const UserProfile: React.FC = () => {
 
         <View style={styles.banner}>
           <Image
-            source={{ uri: 'https://media.istockphoto.com/id/1307241503/photo/beautiful-senior-woman-in-casual-clothing.jpg?s=612x612&w=0&k=20&c=povBZLzdhiaqBNO_HDIhWBxBZ0abitDMbNYYfIar7Lw=' }}
+            source={{ uri: 'https://img.freepik.com/premium-photo/cheerful-positive-pretty-mature-lady-candid-face-portrait-happy-attractive-black-haired-middle-aged-woman-looking-away-with-toothy-smile-laughing-having-fun-facial-close-up_650366-7226.jpg' }}
             style={styles.userIcon}
           />
           <Text style={styles.userName}>Maria da Silva</Text>

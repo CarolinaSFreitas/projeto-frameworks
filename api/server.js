@@ -150,7 +150,6 @@ app.get('/professionals', (req, res) => {
     });
 });
 
-// Inicie o servidor
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

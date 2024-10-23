@@ -7,8 +7,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../(types)/types';
 
-
-
 type LoginNavigationProp = StackNavigationProp<RootStackParamList, 'Login'>;
 
 const Login = ({ onLogin }: LoginProps) => {
@@ -57,11 +55,13 @@ const Login = ({ onLogin }: LoginProps) => {
             try {
                 const storedEmail = await AsyncStorage.getItem('userEmail');
                 const storedPassword = await AsyncStorage.getItem('userPassword');
-
-                if (storedEmail === username && storedPassword === password) {
+    
+                if (!storedEmail) {
+                    setErrorMessage('Usuário não existe ou senha incorreta.');
+                } else if (storedEmail === username && storedPassword === password) {
                     alert('Login realizado com sucesso!');
-                    onLogin(true);  
-                    navigation.navigate('Home');  
+                    onLogin(true);
+                    navigation.navigate('Home');
                 } else {
                     setErrorMessage('E-mail ou senha incorretos.');
                 }
@@ -72,7 +72,7 @@ const Login = ({ onLogin }: LoginProps) => {
             alert('Por favor, preencha corretamente os campos antes de continuar.');
         }
     };
-
+    
     return (
         <View style={styles.container}>
             <Image source={require('../../assets/images/logo.png')} style={styles.logo} />
