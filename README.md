@@ -1,3 +1,6 @@
+# About Florence Care
+This project, developed as part of our graduation, is an application designed for individuals seeking professionals to provide home care services.
+
 ## Get started
 1. Install dependencies
 
@@ -16,6 +19,3 @@
    ```bash
     npx expo start
    ```
-
-## About 
-This project, developed as part of our graduation, is an application designed for individuals seeking professionals to provide home care services.
