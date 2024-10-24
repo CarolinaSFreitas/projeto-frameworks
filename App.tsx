@@ -6,6 +6,8 @@ import * as Font from 'expo-font';
 import Login from './app/(screens)/Login';
 import Signup from './app/(screens)/Signup';
 import Navigation from './app/(navigation)/Navigation';
+import { ToastProvider } from 'react-native-toast-notifications';
+
 
 const Stack = createStackNavigator();
 
@@ -35,22 +37,29 @@ const App = () => {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
-      <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-          {isLoggedIn ? (
-            <Stack.Screen name="AppLayout" component={Navigation} />
-          ) : (
-            <>
-              <Stack.Screen name="Login">
-                {(props) => <Login {...props} onLogin={setIsLoggedIn} />}
-              </Stack.Screen>
-              <Stack.Screen name="Signup" component={Signup} />
-            </>
-          )}
-        </Stack.Navigator>
-      </NavigationContainer>
-    </SafeAreaView>
+    <ToastProvider
+      successColor="#2cde91"
+     
+    >
+
+      <SafeAreaView style={styles.container}>
+        <NavigationContainer>
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
+            {isLoggedIn ? (
+              <Stack.Screen name="AppLayout" component={Navigation} />
+            ) : (
+              <>
+                <Stack.Screen name="Login">
+                  {(props) => <Login {...props} onLogin={setIsLoggedIn} />}
+                </Stack.Screen>
+                <Stack.Screen name="Signup" component={Signup} />
+              </>
+            )}
+          </Stack.Navigator>
+        </NavigationContainer>
+      </SafeAreaView>
+    </ToastProvider>
+
   );
 };
 
