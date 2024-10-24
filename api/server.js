@@ -22,6 +22,7 @@ db.serialize(() => {
     description TEXT,
     tags TEXT,
     photo TEXT,
+    rating REAL
   )`);
 
     const professionalsData = [
