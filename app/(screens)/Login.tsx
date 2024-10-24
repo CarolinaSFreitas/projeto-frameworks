@@ -62,7 +62,7 @@ const Login = ({ onLogin }: LoginProps) => {
                 } else if (storedEmail === username && storedPassword === password) {
                     toast.show('Login realizado com sucesso!', {
                         type: 'success',
-                        duration: 720,
+                        duration: 1000,
                         placement: 'top',
                     });
                     onLogin(true);
