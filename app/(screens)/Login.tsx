@@ -6,6 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../(types)/types';
+import { useToast } from 'react-native-toast-notifications'; // Importando o hook de toast
 
 type LoginNavigationProp = StackNavigationProp<RootStackParamList, 'Login'>;
 
@@ -16,13 +17,13 @@ const Login = ({ onLogin }: LoginProps) => {
     const [errorMessage, setErrorMessage] = useState('');
     const [isTouched, setIsTouched] = useState(false);
     const [isFormValid, setIsFormValid] = useState(false); 
+    const toast = useToast(); // Inicializando o hook de toast
 
     const validateEmail = (email: string) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     };
 
-    // Verifica se o usuário já está logado
     useEffect(() => {
         const checkLogin = async () => {
             const storedEmail = await AsyncStorage.getItem('userEmail');
@@ -59,7 +60,11 @@ const Login = ({ onLogin }: LoginProps) => {
                 if (!storedEmail) {
                     setErrorMessage('Usuário não existe ou senha incorreta.');
                 } else if (storedEmail === username && storedPassword === password) {
-                    alert('Login realizado com sucesso!');
+                    toast.show('Login realizado com sucesso!', {
+                        type: 'success',
+                        duration: 720,
+                        placement: 'top',
+                    });
                     onLogin(true);
                     navigation.navigate('Home');
                 } else {
@@ -69,7 +74,11 @@ const Login = ({ onLogin }: LoginProps) => {
                 console.error('Error fetching data', error);
             }
         } else {
-            alert('Por favor, preencha corretamente os campos antes de continuar.');
+            toast.show('Por favor, preencha corretamente os campos antes de continuar.', {
+                type: 'warning',
+                duration: 4000,
+                placement: 'top',
+            });
         }
     };
     
