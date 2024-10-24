@@ -6,11 +6,13 @@ import { RootStackParamList } from '../(types)/types';
 import styles2 from '../../styles/SignupStyles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useToast } from 'react-native-toast-notifications';
 
 type SignupNavigationProp = StackNavigationProp<RootStackParamList, 'Signup'>;
 
 const Signup = () => {
     const navigation = useNavigation<SignupNavigationProp>();
+    const toast = useToast();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -50,6 +52,13 @@ const Signup = () => {
             try {
                 await AsyncStorage.setItem('userEmail', email);
                 await AsyncStorage.setItem('userPassword', password);
+
+                toast.show('Cadastro realizado com sucesso!', {
+                    type: 'success',
+                    duration: 1000, 
+                    placement: 'top',
+                });
+
                 navigation.navigate('Login');
             } catch (error) {
                 console.error('Error saving data', error);
