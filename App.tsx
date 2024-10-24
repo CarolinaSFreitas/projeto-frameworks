@@ -39,7 +39,7 @@ const App = () => {
   return (
     <ToastProvider
       successColor="#2cde91"
-     
+      warningColor="red"
     >
 
       <SafeAreaView style={styles.container}>
