@@ -8,6 +8,10 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../(types)/types';
 import { useToast } from 'react-native-toast-notifications'; // Importando o hook de toast
 
+interface LoginProps {
+    onLogin: (isLoggedIn: boolean) => void;
+}
+
 type LoginNavigationProp = StackNavigationProp<RootStackParamList, 'Login'>;
 
 const Login = ({ onLogin }: LoginProps) => {

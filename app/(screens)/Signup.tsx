@@ -117,7 +117,7 @@ const Signup = () => {
                         style={styles2.submitButton}
                         onPress={handleSignup}
                         disabled={!isEmailValid || !isPasswordValid}
-                        data-testid="submit-button"
+                        
                     >
                         <Text style={styles2.buttonText}>Criar Conta</Text>
                     </TouchableOpacity>

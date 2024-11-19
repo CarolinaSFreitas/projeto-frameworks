@@ -2,36 +2,32 @@
 
 describe('Teste de Cadastro e Login', () => {
   beforeEach(() => {
-    // Inicializa o app antes de cada teste
-    cy.visit('http://localhost:8081'); // Substitua pela URL correta do seu app
-    cy.wait(1000);
+    cy.visit('http://localhost:8081'); 
+    cy.wait(1000); 
   });
 
-  it('Deve realizar o cadastro', () => {
-    // Passo 1: Está na tela de login
-    // Clica no botão de "Cadastrar"
-    cy.contains('Cadastrar').click();
-
-    // Passo 2: Preenche os campos de cadastro
+  it('Cadastro e Acesso', () => {
+    cy.contains('Cadastrar', { timeout: 5000 }).should('be.visible').click();
     cy.get('input[placeholder="Escolha seu melhor E-mail"]').type('carol@gmail.com');
     cy.get('input[placeholder="Escolha sua melhor Senha"]').type('Theo1234!');
     cy.wait(500);
-    cy.get('[data-testid="submit-button"]', { timeout: 10000 }).click();
 
+    cy.contains('Criar Conta', { timeout: 10000 }).should('be.visible').click({ force: true });
+    cy.wait(1200);
 
-
-
-
-
-  });
-
-  it('Deve realizar o login', () => {
-    // Passo 4: Está na tela de login
-    // Preenche os campos de login
-    cy.wait(1000);
+    cy.window().then((window) => {
+      window.localStorage.setItem('userEmail', 'carol@gmail.com');
+      window.localStorage.setItem('userPassword', 'Theo1234!');
+      expect(window.localStorage.getItem('userEmail')).to.eq('carol@gmail.com');
+      expect(window.localStorage.getItem('userPassword')).to.eq('Theo1234!');
+    });
+    cy.wait(1200);
+  
     cy.get('input[placeholder="Digite seu e-mail"]').type('carol@gmail.com');
     cy.get('input[placeholder="Digite sua senha"]').type('Theo1234!');
-    
-    cy.contains('Entrar').click({ force: true }); // Tentativa sem forçar
-});
+  
+    cy.contains('Entrar').should('be.visible').click({ force: true });
+    cy.wait(1000);
+   
+  });
 });

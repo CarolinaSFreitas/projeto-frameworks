@@ -8,7 +8,6 @@ const ProfList: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [professionalsData, setProfessionalsData] = useState<any[]>([]);
 
-  //função para buscar os profissionais da API
   const fetchProfessionals = async () => {
     try {
       const response = await fetch('http://localhost:3000/professionals');
@@ -19,7 +18,6 @@ const ProfList: React.FC = () => {
     }
   };
   
-
   useEffect(() => {
     fetchProfessionals();
   }, []);
