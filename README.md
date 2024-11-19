@@ -19,3 +19,9 @@ This project, developed as part of our graduation, is an application designed fo
    ```bash
     npx expo start
    ```
+
+## Testes Cypress:
+Instalar: ``npm install --save-dev cypress --legacy-peer-deps``
+Verificar: ``npx cypress verify``
+Abrir: ``npx cypress open``
+Rodar: ``npx cypress run``
