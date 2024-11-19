@@ -85,12 +85,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#333',
   },
-  modalContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  },
   modalContent: {
     backgroundColor: '#fff',
     borderRadius: 10,
@@ -158,19 +152,55 @@ const styles = StyleSheet.create({
   modalValue: {
     fontSize: 14,
   },
-  closeButton: {
+  input: {
+    height: 40,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    marginBottom: 15,
+    paddingLeft: 10,
+    borderRadius: 5,
+  },
+  saveButton: {
     backgroundColor: '#36c9d1',
-    padding: 12,
-    borderRadius: 40,
-    alignItems: 'center',
-    marginTop: 20,
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 10,
+  },
+  saveButtonText: {
+    color: '#fff',
+    textAlign: 'center',
+  },
+  closeButton: {
+    backgroundColor: '#C98EE7',
+    padding: 10,
+    borderRadius: 5,
   },
   closeButtonText: {
     color: '#fff',
-    fontSize: 16,
-    fontFamily: 'Poppins-Regular',
+    textAlign: 'center',
   },
-
+  modalContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  modalText: {
+    fontSize: 16,
+    color: '#333',
+    marginBottom: 10,
+  
+  },
+  modalInput: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+    padding: 10,
+    marginBottom: 10,
+    fontSize: 16,
+    color: '#333',
+  
+  },
 });
 
 export default styles;
