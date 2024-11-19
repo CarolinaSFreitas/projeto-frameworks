@@ -20,8 +20,8 @@ This project, developed as part of our graduation, is an application designed fo
     npx expo start
    ```
 
-## Testes Cypress:
-Instalar: ``npm install --save-dev cypress --legacy-peer-deps``
-Verificar: ``npx cypress verify``
-Abrir: ``npx cypress open``
-Rodar: ``npx cypress run``
+## Tests - Cypress:
+- Install: ``npm install --save-dev cypress --legacy-peer-deps``
+- Verify: ``npx cypress verify``
+- Open: ``npx cypress open``
+- Run: ``npx cypress run``
