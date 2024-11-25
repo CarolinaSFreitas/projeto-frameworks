@@ -1,12 +1,10 @@
 /// <reference types="cypress" />
 
 describe('Teste de Cadastro e Login', () => {
-  beforeEach(() => {
+  it('Cadastro e Acesso', () => {
     cy.visit('http://localhost:8081'); 
     cy.wait(1000); 
-  });
 
-  it('Cadastro e Acesso', () => {
     cy.contains('Cadastrar', { timeout: 5000 }).should('be.visible').click();
     cy.get('input[placeholder="Escolha seu melhor E-mail"]').type('carol@gmail.com');
     cy.get('input[placeholder="Escolha sua melhor Senha"]').type('Theo1234!');
