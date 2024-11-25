@@ -3,7 +3,7 @@
 describe('Teste de Cadastro e Login', () => {
   it('Cadastro e Acesso', () => {
     cy.visit('http://localhost:8081'); 
-    cy.wait(1000); 
+    cy.wait(600); 
 
     cy.contains('Cadastrar', { timeout: 5000 }).should('be.visible').click();
     cy.get('input[placeholder="Escolha seu melhor E-mail"]').type('carol@gmail.com');
