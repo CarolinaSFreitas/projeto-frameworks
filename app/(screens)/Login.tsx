@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../(types)/types';
-import { useToast } from 'react-native-toast-notifications'; // Importando o hook de toast
+import { useToast } from 'react-native-toast-notifications'; 
 
 interface LoginProps {
     onLogin: (isLoggedIn: boolean) => void;
@@ -21,7 +21,7 @@ const Login = ({ onLogin }: LoginProps) => {
     const [errorMessage, setErrorMessage] = useState('');
     const [isTouched, setIsTouched] = useState(false);
     const [isFormValid, setIsFormValid] = useState(false); 
-    const toast = useToast(); // Inicializando o hook de toast
+    const toast = useToast(); 
 
     const validateEmail = (email: string) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

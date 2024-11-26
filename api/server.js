@@ -11,7 +11,7 @@ app.use(cors({
 
 app.use(express.json());
 
-const db = new sqlite3.Database(':memory:');
+const db = new sqlite3.Database('florence_care.db');
 
 db.serialize(() => {
     db.run(`CREATE TABLE professionals (
