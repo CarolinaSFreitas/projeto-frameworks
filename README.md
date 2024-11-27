@@ -8,6 +8,10 @@ This project, developed as part of our graduation, is an application designed fo
    npm install
    ```
 
+   ```bash
+    npm i --legacy-peer-deps
+   ```
+
 2. Start the Server
 
    ```bash
@@ -25,3 +29,8 @@ This project, developed as part of our graduation, is an application designed fo
 - Verify: ``npx cypress verify``
 - Open: ``npx cypress open``
 - Run: ``npx cypress run``
+
+
+-----------------
+### Nota:
+Caso dê erro no arquivo "tsconfig.json": ``Ctrl + Shift + P`` and run Typescript: Restart TS Server
