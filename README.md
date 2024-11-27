@@ -28,7 +28,7 @@ This project, developed as part of our graduation, is an application designed fo
 - Install: ``npm install --save-dev cypress --legacy-peer-deps``
 - Verify: ``npx cypress verify``
 - Open: ``npx cypress open``
-- Run: ``npx cypress run``
+- Run: ``npx cypress run`` (/projeto-frameworks)
 
 
 -----------------
