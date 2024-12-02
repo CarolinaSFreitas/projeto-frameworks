@@ -12,7 +12,8 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.carolinasfreitas.florencecare"
     },
     "android": {
       "adaptiveIcon": {
@@ -20,20 +21,27 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.carolinasfreitas.florencecare",
-      "minSdkVersion": 24
+      "minSdkVersion": 23
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "build": {
+        "babel": {
+          "include": ["react-dom"]
+        },
+        "serviceWorker": {
+          "src": "./service-worker.js"
+        }
+      }
     },
+    "platforms": ["ios", "android", "web"],
     "extra": {
       "eas": {
         "projectId": "263002b6-4d3e-4170-818f-b2006d5eaf7a"
       }
     },
     "owner": "carolinasfreitas",
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
+    "runtimeVersion": "1.0.0",
     "updates": {
       "url": "https://u.expo.dev/263002b6-4d3e-4170-818f-b2006d5eaf7a"
     }
